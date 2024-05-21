@@ -12,10 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (isset($_POST['update'])) {
         $id = $_POST['id'];
         $name = $_POST['name'];
-        $collection->updateOne(['_id' => new MongoDB\BSON\ObjectId($id)], ['$set' => ['name' => $name]]);
+        $collection->updateOne(['_id' => new MongoDB\BSON\ObjectID($id)], ['$set' => ['name' => $name]]);
     } elseif (isset($_POST['delete'])) {
         $id = $_POST['id'];
-        $collection->deleteOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
+        $collection->deleteOne(['_id' => new MongoDB\BSON\ObjectID($id)]);
     }
 }
 
@@ -26,10 +26,10 @@ $items = $collection->find();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Protected Page</title>
+    <title>DataView</title>
 </head>
 <body>
-    <h1>Welcome to the protected page!</h1>
+    <h1>Welcome to the Data View Page using MongoDB!</h1>
     <a href="logout.php">Logout</a>
     
     <h2>Create Item</h2>
