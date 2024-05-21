@@ -68,7 +68,7 @@ border-bottom-right-radius: .3rem;
                 <form method="POST" action="login.php">
                   <p>Please login to your account</p>
                   <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="email" id="username" name="username" class="form-control"
+                    <input type="text" id="username" name="username" class="form-control"
                        required/>
                     <label class="form-label" for="username">Username</label>
                   </div>
