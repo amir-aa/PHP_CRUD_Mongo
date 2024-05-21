@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "User registered successfully!";
             header("Location: protected.php");
         } else {
-            echo "Registration failed!";
+            $message= "Registration failed!";
         }
     }
 }
@@ -93,7 +93,9 @@ border-bottom-right-radius: .3rem;
                     <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Sign Up</button>
                     
                   </div>
-
+                  <?php if ($message): ?>
+                     <div class="message"><?php echo htmlspecialchars($message); ?></div>
+                <?php endif; ?>
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Already have an account?</p>
                     <a href="/login.php"> <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-danger">LogIn</button></a>

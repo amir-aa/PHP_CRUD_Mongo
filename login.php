@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: protected.php");
         exit;
     } else {
-        echo "Invalid username or password!";
+        $message= "Invalid username or password!";
     }
 }
 ?>
@@ -83,7 +83,9 @@ border-bottom-right-radius: .3rem;
                       in</button>
                     
                   </div>
-
+                  <?php if ($message): ?>
+                    <div class="message"><?php echo htmlspecialchars($message); ?></div>
+                <?php endif; ?>
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Don't have an account?</p>
                     <a href="/register.php"> <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-danger">Create new</button></a>
