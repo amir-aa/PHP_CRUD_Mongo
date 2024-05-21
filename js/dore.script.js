@@ -2964,7 +2964,8 @@ $.dore = function (element, options) {
           { "data": "Oid" },
           { "data": "Title" },
           { "data": "User" },
-          { "data": "Message" }
+          { "data": "Message" },
+          { "data": "Actions" }
         ],
         drawCallback: function () {
           $($(".dataTables_wrapper .pagination li:first-of-type"))
@@ -2982,7 +2983,7 @@ $.dore = function (element, options) {
             next: "<i class='simple-icon-arrow-right'></i>"
           },
           search: "_INPUT_",
-          searchPlaceholder: "Search here..",
+          searchPlaceholder: "اینجا بگرد...",
           lengthMenu: "موارد در هرصفحه _MENU_"
         },
       });
